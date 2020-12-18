@@ -1,13 +1,124 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.App {
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(26, 26, 25);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input,
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+form {
+  display: block;
+  position: relative;
+}
+
+form:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  z-index: 1;
+  background-image: linear-gradient(to right, #f10c7fe1, #f1cf0e);
+}
+
+form .form-inner {
+  position: relative;
+  display: block;
+  background-color: rgb(250, 231, 202);
+  padding: 30px;
+  z-index: 2;
+}
+
+form .form-inner h2 {
+  display: block;
+  font-size: 250%;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+form .form-inner .form-group {
+  display: block;
+  width: 300px;
+  font-size: 150%;
+  margin-bottom: 30px;
+  font-weight: 200;
+}
+
+form .form-inner .form-group label {
+  display: block;
+  color: rgb(32, 32, 32);
+  transition: 0.04s;
+}
+
+form .form-inner .form-group:focus-within label {
+  color: crimson;
+}
+
+form .form-inner .form-group input {
+  font-size: 70%;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: darkgrey;
+  border-radius: 5px;
+  transition: 0.04s;
+}
+
+form .form-inner .form-group input:focus {
+  box-shadow: 0px 0px 3px rgba (0, 0, 0, 0.2);
+}
+
+form .form-inner input[type="submit"],
+.Welcome button {
+  display: inline-block;
+  padding: 10px 130px 10px 90px;
+  font-size: 150%;
+  font-weight: 400;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #f10c7fe1, #f1cf0e);
+  background-position: center;
+  width: 80%;
+  cursor: pointer;
+  transition: 0.04s;
+}
+
+form .form-inner input[type="submit"]:hover,
+.Welcome button:hover {
+  background-position: 100% 0%;
+}
+.Welcome {
+  font-size: 300%;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: seagreen;
+  content: "";
+  display: block;
+  position: relative;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  z-index: 1;
+  background-color: rgb(250, 231, 202);
+  padding: 30px;
+  z-index: 2;
+}
+
+.Welcome button {
+  font-size: 20px;
 }
